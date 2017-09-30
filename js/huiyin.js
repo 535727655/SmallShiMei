@@ -2,7 +2,6 @@ $(function(){
 	var filterStrs = [',','，','。','.'];
 	
 	$("#generate").click(function(){
-		alert("");
 		var old_str = $("#old_str").val();
 		old_str = replaceStr(old_str, filterStrs);
 		generate(old_str);
