@@ -1,0 +1,49 @@
+
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link href="../css/main.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<script src="../js/jquery-3.0.0.min.js"></script>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">回音</h1>
+		</header>
+
+		<div class="content">
+			<div class="mui-input-row mt60">
+				<label>原始语句</label>
+				<input type="text" class="mui-input-clear" id="old_str" placeholder="请输入原始语句">
+			</div>
+		</div>
+		<div class="center mt10">
+			<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined" id="generate">生成回音</button>
+		</div>
+		<p>全文:</p>
+		<div class="center mt20">
+			<textarea class="wd08" id="new_str" readonly="readonly"></textarea>
+		</div>
+		<p>选择:</p>
+		<div class="center">
+			<ul class="mui-table-view" id="sel_str">
+				 <li class="mui-table-view-cell">Item 1</li>
+		         <li class="mui-table-view-cell">Item 2</li>
+		         <li class="mui-table-view-cell">Item 3</li>
+			</ul>
+		</div>
+	</body>
+	
+	
+		<script type="text/javascript" src="../js/huiyin.js" ></script>
+
+</html>
