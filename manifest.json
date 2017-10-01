@@ -187,8 +187,8 @@
 					"mdpi": "", /*普通屏启动图片，分辨率：240x282*/
 					"ldpi": "", /*大屏启动图片，分辨率：320x442*/
 					"hdpi": "", /*高分屏启动图片，分辨率：480x762*/
-					"xhdpi": "C:/Users/Administrator/Desktop/pic/回音/null53ffae0c4e8d51c.png", /*720P高分屏启动图片，分辨率：720x1242*/
-					"xxhdpi": "C:/Users/Administrator/Desktop/pic/回音/null53ffae0c4e8d51c.png"
+					"xhdpi": "img/huiyin/xsm.png", /*720P高分屏启动图片，分辨率：720x1242*/
+					"xxhdpi": "img/huiyin/xsm.png"
 				}
 			}
 		}
