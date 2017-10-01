@@ -1,4 +1,3 @@
-
 <html>
 
 	<head>
@@ -36,14 +35,37 @@
 		<p>选择:</p>
 		<div class="center">
 			<ul class="mui-table-view" id="sel_str">
-				 <li class="mui-table-view-cell">Item 1</li>
-		         <li class="mui-table-view-cell">Item 2</li>
-		         <li class="mui-table-view-cell">Item 3</li>
+				<!--<li class="mui-table-view-cell">Item 1</li>
+				<li class="mui-table-view-cell">Item 2</li>
+				<li class="mui-table-view-cell">Item 3</li>-->
 			</ul>
 		</div>
+
+		<div class="center mt30">
+			<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined" onclick="shareSystem()">发送到</button>
+		</div>
 	</body>
-	
-	
-		<script type="text/javascript" src="../js/huiyin.js" ></script>
+
+	<script type="text/javascript" src="../js/huiyin.js"></script>
+
+	<script type="text/javascript" charset="utf-8">
+		// 监听plusready事件  
+		document.addEventListener("plusready", function() {
+			// 扩展API加载完毕，现在可以正常调用扩展API
+		}, false);
+		// 通过系统组件分享 
+
+		function shareSystem() {
+			var content = $("#new_str").val();
+			plus.share.sendWithSystem({
+				content: content,
+				href: 'http://www.dcloud.io/'
+			}, function() {
+				console.log('分享成功');
+			}, function(e) {
+				console.log('分享失败：' + JSON.stringify(e));
+			});
+		}
+	</script>
 
 </html>

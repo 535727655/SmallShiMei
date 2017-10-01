@@ -3,9 +3,24 @@
     "href": "index.html",
     "resources": [
       "js/mui.min.js",
-      "css/mui.min.css"
+      "css/mui.min.css",
+      "fonts/mui.ttf",
+      "css/iconfont.css",
+      "main/huiyin.html",
+      "fonts/iconfont.ttf"
     ],
     "refer": [],
     "priority": 0
+  },
+  "main/huiyin.html": {
+    "resources": [
+      "css/main.css",
+      "js/jquery-3.0.0.min.js",
+      "js/huiyin.js",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css"
+    ],
+    "refer": []
   }
 }

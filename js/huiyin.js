@@ -22,7 +22,7 @@ $(function(){
 		}
 		if(filter_strs != null){
 			$.each(filter_strs, function(i,v) {
-				old_str.replace(v, "");
+				old_str.replace(new RegExp(v,'g'), "");
 			});
 			console.log("replace之后为"+old_str);
 		}
@@ -34,12 +34,22 @@ $(function(){
 		if(isNotNull(old_str)){
 			for(i = 0; i < old_str.length; i ++) {
 				var new_str = old_str.substring(i, old_str.length);
+				var prefix = "";
+				var len = chkstrlen(old_str.substring(0,i));
+				for(j = 0; j <= len; j++){
+					prefix += "  ";
+				}
+				new_str = prefix + new_str;
 				var array_length = newStrs.push(new_str);
 				console.log("生成新回音元素，当前元素数量为"+array_length);
 			}
 		}
 		var html = "";
-		$("#new_str").val(newStrs.toString());
+		var str = newStrs.toString();
+		console.log("生成的回音array字符串 = "+str);
+		str = str.replace(new RegExp(',','g'),"\n");
+		console.log("replace之后的回音array字符串 = "+str);
+		$("#new_str").val(str);
 		for(i = 0; i < newStrs.length; i++){
 			html += '<li class="mui-table-view-cell sel">'+newStrs[i]+'</li>';
 		}
@@ -52,5 +62,18 @@ $(function(){
 		}
 		return false;
 	}
+	
+	
+	//根据是否汉字返回字符数
+	　function chkstrlen(str){
+	　　　　var strlen = 0;
+	　　　　for(var i = 0;i < str.length; i++) {
+	　　　　　　if(str.charCodeAt(i) > 255) //如果是汉字，则字符串长度加2
+	　　　　　　　　strlen += 2;
+	　　　　　　else  
+	　　　　　　　　strlen++;
+	　　　　}
+	　　　　return strlen;
+　　	}
 	
 })
